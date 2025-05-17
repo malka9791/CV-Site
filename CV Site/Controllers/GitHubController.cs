@@ -14,7 +14,7 @@ namespace CV_Site.Controllers
         {
            _gitHubService = gitHubService;
         }
-        [HttpGet("username")]
+        [HttpGet]
         public async Task<IReadOnlyList<Repository>> GetRepositories()
         {
             return await _gitHubService.GetPortfolioAsync();

@@ -20,7 +20,7 @@ namespace GitHub.Services.services
         {
             _client = new GitHubClient(new ProductHeaderValue("GitHubService"));
             _option = options.Value;
-            //_client.Credentials = new Credentials(); // טוקן אישי
+            _client.Credentials = new Credentials(_option.Token); // טוקן אישי
         }
         public async Task<IReadOnlyList<Repository>> GetPortfolioAsync()
         {
